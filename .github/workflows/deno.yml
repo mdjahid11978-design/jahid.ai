@@ -29,7 +29,9 @@ jobs:
         # uses: denoland/setup-deno@v1
         uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31  # v1.1.2
         with:
-          deno-version: v1.x
+          # Pin Deno to a specific minor version for reproducible CI.
+          # Update deliberately when adopting a newer Deno release.
+          deno-version: v1.45.x
 
       # Uncomment this step to verify the use of 'deno fmt' on each commit.
       # - name: Verify formatting
